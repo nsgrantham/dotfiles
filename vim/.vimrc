@@ -9,7 +9,7 @@ syntax on         " Enable syntax highlighting
 "   Plugins
 " ==============================
 
-call plug#begin('~/.dotfiles/.vim/plugins')
+call plug#begin('~/.dotfiles/vim/.vim/plugins')
 
 Plug 'Yggdroot/indentLine'
 Plug 'scrooloose/nerdtree'

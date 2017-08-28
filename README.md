@@ -18,7 +18,7 @@ $ ./install.sh
 
 ## Components
 
-- [vim](vim/README.md)
-- [zsh](zsh/README.md)
-- [tmux](tmux/README.md)
-- [macOS](macos/README.md)
+- [vim](vim/)
+- [zsh](zsh/)
+- [tmux](tmux/)
+- [macOS](macos/)
