@@ -1,0 +1,18 @@
+cask_args appdir: '/Applications'
+
+brew 'imagemagick'
+brew 'openssl'
+brew 'pass'
+brew 'pandoc'
+brew 'reattach-to-user-namespace'
+brew 'tmux'
+brew 'tree'
+brew 'wget'
+brew 'zsh'
+
+cask 'atom'
+cask 'firefox'
+cask 'google-chrome'
+cask 'slack'
+cask 'steam'
+cask 'vlc'
