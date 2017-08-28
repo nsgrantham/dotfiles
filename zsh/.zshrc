@@ -23,6 +23,7 @@ PATH=${PATH}:/usr/bin
 PATH=${PATH}:/bin
 PATH=${PATH}:/usr/sbin
 PATH=${PATH}:/sbin
+PATH=${PATH}:/usr/local/texlive/2014/bin/x86_64-darwin
 
 export PATH=${PATH}
 

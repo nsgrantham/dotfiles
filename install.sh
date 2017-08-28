@@ -14,6 +14,7 @@ while true; do
 done
 
 declare -a FILES_TO_SYMLINK=(
+  "latex/.latexmkrc"
   "tmux/.tmux.conf" 
   "vim/.vim"
   "vim/.vimrc" 
