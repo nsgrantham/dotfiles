@@ -1,0 +1,71 @@
+[user]
+    name = Neal Grantham
+    email = nealsgrantham@gmail.com
+
+[github]
+    user = nsgrantham
+
+[credential]
+    helper = osxkeychain
+
+[alias]
+    # Show all of my configured aliases
+    aliases = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\ => \\2/' | sort
+
+    # Show all branches
+    br = branch -av
+    
+    # Checkout shorthand
+    co = checkout
+
+    # Commit shorthand
+    ci = commit -m
+
+    # View a pretty git log with branch tree
+    # Modified from https://stackoverflow.com/a/34467298
+    graph = log --graph --abbrev-commit --decorate --format=format:'%C(bold yellow)%h%C(reset) - %C(cyan)(%ar)%C(reset) %C(white)%s%C(reset) - %C(magenta)%an%C(reset)%C(auto)%d%C(reset)'
+    graph2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold yellow)%h%C(reset) - %C(cyan)%aD%C(reset) %C(cyan)(%ar)%C(reset)%C(auto)%d%C(reset)%n'' %C(white)%s%C(reset) - %C(magenta)%an <%ae>%C(reset)'
+
+    # Status shorthand
+    st = status
+
+    # Update all submodules
+    subup = submodule update --init
+    
+    # Unstage changes from the index
+    unstage = reset HEAD --
+
+[color]
+    ui = true
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = red
+
+[core]
+    autocrlf = input
+    excludesfile = ~/.gitignore_global
+
+[push]
+    default = simple
+
+[url "https://github.com/"]
+    insteadOf = gh:
+
+[url "https://gist.github.com/"]
+    insteadOf = gist:
+
+[url "https://bitbucket.org/"]
+    insteadOf = bb:

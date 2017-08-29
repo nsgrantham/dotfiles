@@ -2,10 +2,11 @@
 
 DOTFILES=$HOME/.dotfiles
 
+
 # Ask for confirmation before proceeding with installation
 
 while true; do
-  read -p "Warning: this will overwrite your current dotfiles in $HOME. Continue [y/n]? " yn
+  read -p "Warning: this will overwrite your current dotfiles in $HOME. Continue [yn]? " yn
   case $yn in
     [Yy]* ) break;;
     [Nn]* ) exit;;
@@ -14,6 +15,8 @@ while true; do
 done
 
 declare -a FILES_TO_SYMLINK=(
+  "git/.gitconfig"
+  "git/.gitignore_global"
   "latex/.latexmkrc"
   "tmux/.tmux.conf" 
   "vim/.vim"
@@ -24,26 +27,29 @@ declare -a FILES_TO_SYMLINK=(
 for file in "${FILES_TO_SYMLINK[@]}"; do
   source_file="$DOTFILES/$file"
   target_file="$HOME/${file##*/}"
-  echo "Symlinking $source_file to $target_file"
+  echo -n "Symlinking $source_file to $target_file ... "
   ln -sfn $source_file $target_file
+  echo "Done."
 done
 
 
 # Perform macOS-specific installation
 
 if [ "$(uname)" == "Darwin" ]; then
-  echo -e "Setting Mac defaults"
   
   if test ! $(which brew); then
+    echo "Installing Homebrew... "
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    echo "Done."
   fi
   
-  brew bundle -v --file=macos/Brewfile
+  echo "Installing CLI and GUI programs from macos/Brewfile ... "
+  brew bundle --file=macos/Brewfile
+  echo "Done."
 fi
+
 
 # Set ZSH to default shell
 
-echo "Changing default shell to zsh"
-chsh -s $(which zsh)
-
-echo "Done."
+echo -e "\nChange default shell to zsh installed with Homebrew! (Requires admin privileges)"
+echo "  chsh -s /usr/local/bin/zsh"
