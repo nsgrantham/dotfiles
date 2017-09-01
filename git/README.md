@@ -1,6 +1,8 @@
 # Git
 
-`.gitconfig` configures git for your personal use. If you use this file, **make sure to change
+`.gitconfig` configures git for your personal use (Check out Michael Wales' 
+[Make .gitconfig Work for You](http://michaelwales.com/articles/make-gitconfig-work-for-you/) 
+for a great overview). If you use this file, **make sure to change
 user.name, user.email, and github.user!** Further settings change the terminal colors 
 for several git subcommands and provide several useful aliases, such as `git unstage` 
 which removes all files from staging, and `git graph` and `git graph2` which visualize 

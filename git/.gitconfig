@@ -19,7 +19,7 @@
     co = checkout
 
     # Commit shorthand
-    ci = commit -m
+    cm = commit -m
 
     # View a pretty git log with branch tree
     # Modified from https://stackoverflow.com/a/34467298
