@@ -18,6 +18,7 @@ declare -a FILES_TO_SYMLINK=(
   "git/.gitconfig"
   "git/.gitignore_global"
   "latex/.latexmkrc"
+  "R/.Rprofile"
   "tmux/.tmux.conf" 
   "vim/.vim"
   "vim/.vimrc" 

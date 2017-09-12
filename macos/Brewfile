@@ -12,6 +12,7 @@ brew 'zsh'
 
 cask 'atom'
 cask 'firefox'
+cask 'google-backup-and-sync'
 cask 'google-chrome'
 cask 'skim'
 cask 'slack'
