@@ -53,4 +53,5 @@ fi
 # Set ZSH to default shell
 
 echo -e "\nChange default shell to zsh installed with Homebrew! (Requires admin privileges)"
-echo "  chsh -s /usr/local/bin/zsh"
+echo '  sudo sh -c "echo $(which zsh) >> /etc/shells"' 
+echo '  chsh -s "$(which zsh)"'
