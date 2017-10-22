@@ -20,14 +20,13 @@ declare -a FILES_TO_SYMLINK=(
   "latex/.latexmkrc"
   "R/.Rprofile"
   "tmux/.tmux.conf" 
-  "vim/.vim"
-  "vim/.vimrc" 
+  "nvim/.config/nvim"
   "zsh/.zshrc"
 )
 
 for file in "${FILES_TO_SYMLINK[@]}"; do
   source_file="$DOTFILES/$file"
-  target_file="$HOME/${file##*/}"
+  target_file="$HOME/${file#*/}"
   echo -n "Symlinking $source_file to $target_file ... "
   ln -sfn $source_file $target_file
   echo "Done."

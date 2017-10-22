@@ -1,6 +1,7 @@
 cask_args appdir: '/Applications'
 
 brew 'imagemagick'
+brew 'neovim'
 brew 'openssl'
 brew 'pass'
 brew 'pandoc'

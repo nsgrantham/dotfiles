@@ -16,7 +16,8 @@ ZSH_THEME="nsgrantham"
 # ==============================
 #   Path
 # ==============================
-
+  
+PATH=$HOME/miniconda3/bin
 PATH=${PATH}:/usr/local/bin
 PATH=${PATH}:$HOME/bin
 PATH=${PATH}:/usr/bin
@@ -64,6 +65,9 @@ if ls --color > /dev/null 2>&1; then # GNU `ls`
 else # OS X `ls`
     colorflag="-G"
 fi
+
+# Neovim is the future of Vim
+alias vim="nvim"
 
 # Directory shortcuts
 alias ..="cd .."
