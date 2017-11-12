@@ -17,8 +17,7 @@ ZSH_THEME="nsgrantham"
 #   Path
 # ==============================
   
-PATH=$HOME/miniconda3/bin
-PATH=${PATH}:/usr/local/bin
+PATH=/usr/local/bin
 PATH=${PATH}:$HOME/bin
 PATH=${PATH}:/usr/bin
 PATH=${PATH}:/bin

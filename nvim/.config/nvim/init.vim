@@ -10,8 +10,15 @@ Plug 'dracula/vim'
 " Utilities
 Plug 'Yggdroot/indentLine'
 Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-fugitive'
+Plug 'itchyny/lightline.vim'
 
-" Syntax
+" Markdown
+Plug 'tpope/vim-markdown'
+Plug 'junegunn/goyo.vim'
+Plug 'reedes/vim-pencil'
+
+" Syntax Highlighting
 Plug 'sheerun/vim-polyglot'
 Plug 'lervag/vimtex'
 
@@ -23,6 +30,7 @@ call plug#end()
 " ==============================
 
 colorscheme dracula
+let g:lightline = { 'colorscheme': 'Dracula' }
 
 
 " ==============================
@@ -40,8 +48,11 @@ map <C-l> <C-W>l
 "   Settings
 " ==============================
 
+" Status bar
+set noshowmode      " Do not show mode, it is already shown in vim-airline
+
 " Lines
-set nowrap          " No line wrapping
+"set nowrap          " No line wrapping
 set number          " Activate linenumbers
 set relativenumber  " Linenumbers relative to current line
 set numberwidth=5   " Max digits for linenumbers
@@ -56,7 +67,23 @@ set shiftwidth=4   " Size of an indent, in spaces (should evenly divide tabstop)
 set noerrorbells  " Disable error bells
 set title         " Show the filename in the window titlebar
 
+" Undo syntax concealing
+let g:vim_markdown_conceal = 0
+let g:tex_conceal = ""
+let g:vim_markdown_math = 1
+
 " Highlight first character in line that exceeds 80-character max
 " Best to have at end of .vimrc for GUI Vim
 highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%81v', 100)
+
+" Enter prose mode for editing markdown files and other non-code text
+function! ProseMode()
+  call goyo#execute(0, [])
+  set spell noci nosi noai nolist noshowmode noshowcmd wrap linebreak
+  set complete+=s
+  colorscheme dracula
+endfunction
+
+command! ProseMode call ProseMode()
+nmap \p :ProseMode<CR>
