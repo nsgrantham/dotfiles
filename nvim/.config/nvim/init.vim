@@ -6,6 +6,7 @@ call plug#begin('~/.dotfiles/nvim/.config/nvim/plugged')
 
 " Color schemes
 Plug 'dracula/vim'
+Plug 'yuttie/hydrangea-vim'
 
 " Utilities
 Plug 'Yggdroot/indentLine'
@@ -18,9 +19,10 @@ Plug 'tpope/vim-markdown'
 Plug 'junegunn/goyo.vim'
 Plug 'reedes/vim-pencil'
 
-" Syntax Highlighting
+" Language support
 Plug 'sheerun/vim-polyglot'
 Plug 'lervag/vimtex'
+Plug 'JuliaEditorSupport/julia-vim'
 
 call plug#end()
 
@@ -31,7 +33,6 @@ call plug#end()
 
 colorscheme dracula
 let g:lightline = { 'colorscheme': 'Dracula' }
-
 
 " ==============================
 "   Keybindings and mappings 

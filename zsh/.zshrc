@@ -23,7 +23,8 @@ PATH=${PATH}:/usr/bin
 PATH=${PATH}:/bin
 PATH=${PATH}:/usr/sbin
 PATH=${PATH}:/sbin
-PATH=${PATH}:/usr/local/texlive/2014/bin/x86_64-darwin
+PATH=${PATH}:/usr/local/texlive/2017/bin/x86_64-darwin
+PATH=${PATH}:$HOME/Library/Python/3.6/bin
 
 export PATH=${PATH}
 
