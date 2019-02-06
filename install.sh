@@ -1,56 +1,42 @@
-#!/bin/bash
+#! /usr/bin/env bash
 
-DOTFILES=$HOME/.dotfiles
+# Create symbolic links of dotfiles to home directory
 
+old_dotfiles=$HOME/old_dotfiles
+mkdir $old_dotfiles
+echo "Existing dotfiles will be moved to $old_dotfiles"
 
-# Ask for confirmation before proceeding with installation
-
-while true; do
-  read -p "Warning: this will overwrite your current dotfiles in $HOME. Continue [yn]? " yn
-  case $yn in
-    [Yy]* ) break;;
-    [Nn]* ) exit;;
-    * ) echo "Please answer yes [y] or no [n].";;
-  esac
-done
-
-declare -a FILES_TO_SYMLINK=(
-  "git/.gitconfig"
-  "git/.gitignore_global"
-  "latex/.latexmkrc"
-  "R/.Rprofile"
-  "tmux/.tmux.conf" 
-  "nvim/.config/nvim"
-  "zsh/.zshrc"
-)
-
-for file in "${FILES_TO_SYMLINK[@]}"; do
-  source_file="$DOTFILES/$file"
-  target_file="$HOME/${file#*/}"
-  echo -n "Symlinking $source_file to $target_file ... "
-  ln -sfn $source_file $target_file
+symlink_to_home_dir () {
+  if [ -f "$HOME/$1" ]; then
+    cp -R $HOME/$1 $old_dotfiles
+  fi
+  echo -n "Symlinking $1 ... "
+  ln -sfn "$PWD/$1" "$HOME/$1"
   echo "Done."
-done
+}
 
+symlink_to_home_dir .gitconfig
+symlink_to_home_dir .gitignore_global
+symlink_to_home_dir .latexmkrc
+symlink_to_home_dir .Rprofile
+symlink_to_home_dir .tmux.conf
+symlink_to_home_dir .config
+symlink_to_home_dir .zshrc
+symlink_to_home_dir zsh
 
 # Perform macOS-specific installation
 
 if [ "$(uname)" == "Darwin" ]; then
-  
-  if test ! $(which brew); then
-    echo "Installing Homebrew... "
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    echo "Done."
-  fi
-  
-  echo "Installing CLI and GUI programs from macos/Brewfile ... "
-  brew bundle --file=macos/Brewfile
-  echo "Done."
+  source .macos
+  echo -e "Installing programs from Brewfile... "
+  brew bundle --file=Brewfile
+  echo -e "Done."
 fi
 
+# Set zsh to default shell
 
-# Set ZSH to default shell
+if [ -z "`$SHELL -c 'echo $ZSH_VERSION'`" ]; then
+  sudo sh -c "echo $(which zsh) >> /etc/shells"
+  chsh -s "$(which zsh)"
+fi 
 
-echo -e "\nChange default shell to zsh installed with Homebrew! (Requires admin privileges)"
-echo '  sudo sh -c "echo $(which zsh) >> /etc/shells"' 
-echo '  chsh -s "$(which zsh)"'

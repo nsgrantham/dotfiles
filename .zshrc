@@ -3,10 +3,10 @@
 # ==============================
 
 # Path to your oh-my-zsh configuration
-ZSH=$HOME/.dotfiles/zsh/oh-my-zsh
+ZSH=$HOME/zsh/oh-my-zsh
 
 # Path to a custom oh-my-zsh configuration
-ZSH_CUSTOM=$HOME/.dotfiles/zsh/custom
+ZSH_CUSTOM=$HOME/zsh/custom
 
 # Set name of theme to load
 # Look in $ZSH/themes or $ZSH_CUSTOM/themes
