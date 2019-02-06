@@ -1,9 +1,13 @@
 #! /usr/bin/env bash
 
+# This script must be run directly from the dotfiles repository:
+# cd path/to/dotfiles
+# ./install.sh
+
 # Create symbolic links of dotfiles to home directory
 
-old_dotfiles=$HOME/old_dotfiles
-mkdir $old_dotfiles
+old_dotfiles=$HOME/.old_dotfiles/$(date '+%Y-%m-%dT%H:%M:%S')
+mkdir -p $old_dotfiles
 echo "Existing dotfiles will be moved to $old_dotfiles"
 
 symlink_to_home_dir () {
@@ -18,6 +22,7 @@ symlink_to_home_dir () {
 symlink_to_home_dir .gitconfig
 symlink_to_home_dir .gitignore_global
 symlink_to_home_dir .latexmkrc
+symlink_to_home_dir .matplotlib/matplotlibrc
 symlink_to_home_dir .Rprofile
 symlink_to_home_dir .tmux.conf
 symlink_to_home_dir .config

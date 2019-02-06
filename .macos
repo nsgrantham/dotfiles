@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-echo -n "Changing macOS system preferences... "
+echo "Changing macOS system preferences (requires admin privileges) ... "
 
 # Close any open System Preferences panes to prevent them from
 # overriding the settings we’re about to change
