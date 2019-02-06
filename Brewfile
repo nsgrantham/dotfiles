@@ -1,5 +1,6 @@
 cask_args appdir: '/Applications'
 
+brew 'htop'
 brew 'imagemagick'
 brew 'neovim'
 brew 'openssl'
