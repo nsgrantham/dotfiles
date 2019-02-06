@@ -2,7 +2,7 @@
 "   Plugins
 " ==============================
 
-call plug#begin('~/.dotfiles/nvim/.config/nvim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 " Color schemes
 Plug 'dracula/vim'
@@ -28,10 +28,16 @@ call plug#end()
 
 
 " ==============================
-"   Color schemes
+"   Colorschemes
 " ==============================
 
+" Disable background highlighting in colorscheme
+" https://vi.stackexchange.com/questions/16108/neovim-gray-background
+" (Put this line before you set colorscheme)
+au ColorScheme * hi Normal ctermbg=None
+
 colorscheme dracula
+
 let g:lightline = { 'colorscheme': 'dracula' }
 
 

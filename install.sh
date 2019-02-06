@@ -27,10 +27,10 @@ symlink_to_home_dir zsh
 # Perform macOS-specific installation
 
 if [ "$(uname)" == "Darwin" ]; then
-  source .macos
   echo -e "Installing programs from Brewfile... "
   brew bundle --file=Brewfile
   echo -e "Done."
+  source .macos
 fi
 
 # Set zsh to default shell
