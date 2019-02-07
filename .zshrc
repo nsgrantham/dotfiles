@@ -98,6 +98,10 @@ alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 # Recursively delete macOS `.DS_Store` files
 alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 
+# Keep Homebrew neat and tidy
+# https://gist.github.com/indiesquidge/ec010eca3ffa254788c2
+alias brewup="brew update; brew upgrade; brew cleanup; brew doctor"
+
 # File size
 alias fs="stat -f \"%z bytes\""
 
