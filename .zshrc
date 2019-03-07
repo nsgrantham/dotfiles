@@ -12,6 +12,9 @@ ZSH_CUSTOM=$HOME/zsh/custom
 # Look in $ZSH/themes or $ZSH_CUSTOM/themes
 ZSH_THEME="nsgrantham"
 
+# Ignore permission issues and load the 
+# completion system normally.
+ZSH_DISABLE_COMPFIX=true
 
 # ==============================
 #   Path
