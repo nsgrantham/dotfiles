@@ -16,15 +16,19 @@ ZSH_THEME="nsgrantham"
 # ==============================
 #   Path
 # ==============================
+
+export GEM_HOME=$HOME/gems
   
-PATH=/usr/local/bin
-PATH=${PATH}:$HOME/bin
-PATH=${PATH}:/usr/bin
-PATH=${PATH}:/bin
-PATH=${PATH}:/usr/sbin
-PATH=${PATH}:/sbin
-PATH=${PATH}:/usr/local/texlive/2017/bin/x86_64-darwin
-PATH=${PATH}:$HOME/Library/Python/3.6/bin
+PATH=$HOME/bin
+PATH=$PATH:$HOME/Library/Python/3.6/bin
+PATH=$PATH:/usr/local/bin
+PATH=$PATH:/usr/local/opt/ruby/bin
+PATH=$PATH:/usr/local/texlive/2018/bin/x86_64-darwin
+PATH=$PATH:$GEM_HOME/bin
+PATH=$PATH:/usr/bin
+PATH=$PATH:/usr/sbin
+PATH=$PATH:/bin
+PATH=$PATH:/sbin
 
 export PATH
 
