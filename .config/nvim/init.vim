@@ -13,6 +13,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'itchyny/lightline.vim'
+Plug 'wellle/targets.vim'
 
 " Markdown
 Plug 'tpope/vim-markdown'
