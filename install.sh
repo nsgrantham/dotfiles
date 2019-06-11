@@ -21,13 +21,14 @@ symlink_to_home_dir () {
   echo "Done."
 }
 
+symlink_to_home_dir .config
 symlink_to_home_dir .gitconfig
 symlink_to_home_dir .gitignore_global
 symlink_to_home_dir .latexmkrc
-symlink_to_home_dir .matplotlib/matplotlibrc
+symlink_to_home_dir .matplotlib
+symlink_to_home_dir .npmrc
 symlink_to_home_dir .Rprofile
 symlink_to_home_dir .tmux.conf
-symlink_to_home_dir .config
 symlink_to_home_dir .zshrc
 symlink_to_home_dir zsh
 
