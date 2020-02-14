@@ -30,7 +30,7 @@ symlink_to_home_dir .npmrc
 symlink_to_home_dir .Rprofile
 symlink_to_home_dir .tmux.conf
 symlink_to_home_dir .zshrc
-symlink_to_home_dir .zsh
+symlink_to_home_dir zsh
 
 # Create symbolic links of VS Code dotfiles to the app's user settings directory
 
@@ -62,4 +62,5 @@ fi
 if [ -z "`$SHELL -c 'echo $ZSH_VERSION'`" ]; then
   sudo sh -c "echo $(which zsh) >> /etc/shells"
   chsh -s "$(which zsh)"
-fi
+fi 
+
