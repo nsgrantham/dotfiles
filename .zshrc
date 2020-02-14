@@ -3,10 +3,10 @@
 # ==============================
 
 # Path to your oh-my-zsh configuration
-ZSH=$HOME/zsh/oh-my-zsh
+ZSH=$HOME/.zsh/oh-my-zsh
 
 # Path to a custom oh-my-zsh configuration
-ZSH_CUSTOM=$HOME/zsh/custom
+ZSH_CUSTOM=$HOME/.zsh/custom
 
 # Set name of theme to load
 # Look in $ZSH/themes or $ZSH_CUSTOM/themes
@@ -67,11 +67,11 @@ source $ZSH/oh-my-zsh.sh
 alias reload!="source ~/.zshrc"
 
 # Detect which `ls` flavor is in use
-#if ls --color > /dev/null 2>&1; then # GNU `ls`
-#    colorflag="--color"
-#else # OS X `ls`
-#    colorflag="-G"
-#fi
+if ls --color > /dev/null 2>&1; then # GNU `ls`
+    colorflag="--color"
+else # OS X `ls`
+    colorflag="-G"
+fi
 
 # Neovim is the future of Vim
 alias vim="nvim"
@@ -83,13 +83,13 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 # List shortcuts
-#alias l="ls -lah ${colorflag}"
-#alias la="ls -AF ${colorflag}"
-#alias ll="ls -lFh ${colorflag}"
-#alias lld="ls -l | grep ^d"
-alias l="exa --all --long --header --git --blocks --color-scale --time-style=long-iso --extended"
-alias ll="l --tree --level=2"
-alias lll="l --tree --level=3"
+alias l="ls -lah ${colorflag}"
+alias la="ls -AF ${colorflag}"
+alias ll="ls -lFh ${colorflag}"
+alias lld="ls -l | grep ^d"
+#alias l="exa --all --long --header --git --blocks --color-scale --time-style=long-iso --extended"
+#alias ll="l --tree --level=2"
+#alias lll="l --tree --level=3"
 
 
 # Helpers

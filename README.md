@@ -18,12 +18,18 @@ This collection of dotfiles is designed to improve my workflow as a statistician
 brew install git
 ```
 
-3. Install the dotfiles in this repository.
+3. Run the install script to symlink dotfiles to the home directory and change the shell to Zsh.
 
 ```bash
 git clone --recursive https://github.com/nsgrantham/dotfiles
 cd dotfiles
-source install.sh
+./install.sh
+```
+
+4. Download my public GitHub repositories (make sure to change the username here)
+
+```bash
+./clone-public-github-repos.sh nsgrantham
 ```
 
 ## What do these dotfiles do?
