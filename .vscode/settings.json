@@ -2,6 +2,7 @@
     "workbench.colorTheme": "Dracula",
     "editor.fontFamily": "RobotoMono-Light, Menlo, Monaco, 'Courier New', monospace",
     "window.zoomLevel": 0,
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "workbench.activityBar.visible": false
 }
 

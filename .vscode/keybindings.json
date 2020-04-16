@@ -9,5 +9,28 @@
         "key": "ctrl+`",
         "command": "workbench.action.focusActiveEditorGroup",
         "when": "terminalFocus"
+    },
+
+    // Activity Bar shortcuts
+    
+    // Cmd+K+E (E for Explorer or Editor)
+    {
+        "key": "cmd+k cmd+e",
+        "command": "workbench.view.explorer"
+    },
+    // Cmd+K+V (V for Version Control)
+    {
+        "key": "cmd+k cmd+v",
+        "command": "workbench.view.scm"
+    },
+    // Cmd+K+D (D for Debugger)
+    {
+        "key": "cmd+k cmd+d",
+        "command": "workbench.view.debug"
+    },
+    // Cmd+K+X (X for eXtensions)
+    {
+        "key": "cmd+k cmd+x",
+        "command": "workbench.extensions.action.showInstalledExtensions"
     }
 ]
