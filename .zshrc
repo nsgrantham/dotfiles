@@ -87,7 +87,7 @@ alias .....="cd ../../../.."
 #alias la="ls -AF ${colorflag}"
 #alias ll="ls -lFh ${colorflag}"
 #alias lld="ls -l | grep ^d"
-alias l="exa --all --long --header --git --blocks --color-scale --time-style=long-iso --extended"
+alias l="exa --all --long --header --git --blocks --color-scale --time-style=long-iso"
 alias ll="l --tree --level=2"
 alias lll="l --tree --level=3"
 
