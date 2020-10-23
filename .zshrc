@@ -50,7 +50,6 @@ export PATH
 
 plugins=(
     git
-    git-extra
     github
     zsh-syntax-highlighting
 )

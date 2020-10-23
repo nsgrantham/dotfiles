@@ -1,0 +1,10 @@
+{
+    "editor_theme": "Dracula",
+    "pdf_previewer": "none",
+    "posix_terminal_shell": "zsh",
+    "show_invisibles": true,
+    "show_indent_guides": true,
+    "editor_keybindings": "vim",
+    "show_margin": false,
+    "font_size_points": 12
+}

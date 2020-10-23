@@ -76,9 +76,12 @@ set shiftwidth=4   " Size of an indent, in spaces (should evenly divide tabstop)
 set noerrorbells  " Disable error bells
 set title         " Show the filename in the window titlebar
 
+" LaTeX
+let g:tex_flavor = "latex"
+
 " Undo syntax concealing
 let g:vim_markdown_conceal = 0
-let g:tex_conceal = ""
+ let g:tex_conceal = ""
 let g:vim_markdown_math = 1
 
 " Highlight first character in line that exceeds 80-character max
