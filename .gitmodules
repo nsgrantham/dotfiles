@@ -1,0 +1,6 @@
+[submodule ".zsh/ohmyzsh"]
+	path = .zsh/ohmyzsh
+	url = https://github.com/ohmyzsh/ohmyzsh
+[submodule ".zsh/custom/plugins/zsh-syntax-highlighting"]
+	path = .zsh/custom/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting

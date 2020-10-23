@@ -2,11 +2,11 @@
 #   Init
 # ==============================
 
-# Path to your oh-my-zsh configuration
-ZSH=$HOME/zsh/oh-my-zsh
+# Path to your ohmyzsh configuration
+ZSH=$HOME/.zsh/ohmyzsh
 
 # Path to a custom oh-my-zsh configuration
-ZSH_CUSTOM=$HOME/zsh/custom
+ZSH_CUSTOM=$HOME/.zsh/custom
 
 # Set name of theme to load
 # Look in $ZSH/themes or $ZSH_CUSTOM/themes
@@ -44,7 +44,7 @@ export PATH
 # Look in $ZSH/plugins or $ZSH_CUSTOM/plugins
 
 # List of all bundled plugins:
-# https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins
+# https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins
 
 # If zsh-syntax-highlighting is included, it must be last
 
@@ -66,13 +66,6 @@ source $ZSH/oh-my-zsh.sh
 # Reload zsh config
 alias reload!="source ~/.zshrc"
 
-# Detect which `ls` flavor is in use
-#if ls --color > /dev/null 2>&1; then # GNU `ls`
-#    colorflag="--color"
-#else # OS X `ls`
-#    colorflag="-G"
-#fi
-
 # Neovim is the future of Vim
 alias vim="nvim"
 
@@ -81,6 +74,13 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
+
+# Detect which `ls` flavor is in use
+#if ls --color > /dev/null 2>&1; then # GNU `ls`
+#    colorflag="--color"
+#else # OS X `ls`
+#    colorflag="-G"
+#fi
 
 # List shortcuts
 #alias l="ls -lah ${colorflag}"
